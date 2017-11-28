@@ -1,20 +1,70 @@
-.scene {
-    position: relativ;
-    margin-top: 50px;
+html body {
+    height: 100%;
     width: 100%;
-    height: 200px;
-    text-align: center; 
-    vertical-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.game {
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.userstats {
+    padding-left: 2%;
+    background-color: cornflowerblue;
+    color: white;
 }
 
-.scroll-area{
-    position : relative;
-    bottom:0;
+ul.my-actions {
+    height: 40px;
+    padding: 5px;
+    position: relative;
+    left:50%;
+    right: 50%;
+    align-content: center;
+    background-color: black;
+}
+
+.scene {
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+    height: 500px;
+    text-align: center; 
+    vertical-align: center;
+    background: rgb(214,249,255);
+    background: -moz-linear-gradient(top, rgba(214,249,255,1) 0%, rgba(158,232,250,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%);
+    background: linear-gradient(to bottom, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 );
+}
+.loggercontainer {
+    background-color: seagreen;
+    height: 150px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.logger {
+    height: 100px;
+    width: 50%;
+    position: relative;
+    overflow:hidden;
+}
+.scroll-area{   
+    position: absolute;
+    font-family:monospace;
+    font-size: 0.9em;
     width:100%;
     height:100%;
     float:right;
-    overflow-y:scroll;
+    bottom: 0;
+    overflow-y: scroll;
   }
+.scroll-area::-webkit-scrollbar {
+   display: none; 
+}
 
   .my-actions li {
     display: inline;

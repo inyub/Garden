@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html lang="en">
@@ -19,52 +18,59 @@
 </head>
 
 <body>
-  <div class="container"> 
-    <div class="row">
+  <div class="game"> 
+    <div class="row userstats">
         <div class="col-3"><span id="my-name"></span></div>
         <div class="col-3"><span id="my-level"></span></div>
         <div class="col-3"><span id="my-exp"></span></div>
         <div class="col-3"><span id="my-energy"></span></div>
     </div>
-        <div class="row scene">
-          <div class="col-8">
-              <h3>The Garden</h3>
-              <p id="my-bird-names">No Birds here...</p>
-          </div>
-          <div class="col-md-4">
+    
+
+      
+    <div class="row">
+      <div class="scene">
+        <h3>The Garden</h3>
+        <p id="my-bird-names">No Birds here...</p>
+        <div class="col-md-5" id="my-player">
+            <img src="">
+        </div>
+      </div> 
+    </div>
+      <div class="row loggercontainer">
+        <div class="col-md-6">
+           <span id="my-corn">Corn: 0</span> ||
+            <span id="my-feathers">Feathers: 0</span> ||
+            <span id="my-nests">Nest: 0</span> ||
+            <span id="my-birds">Birds: 0</span>
+        </div>
+        <div class="logger">
             <div class="scroll-area" id="log-box">
                 <ul class='log'></ul>
             </div>
           </div>
-        </div>
-    <div id="panel-actions">
+      </div>
+    <div class="panel-actions">
       <ul class="my-actions">
         <li><button id="btn-energy">Energy(+1)</button></li>
+          <li><button id="btn-exp">EXP(+1)</button></li>
         <li><button id="btn-walk">Go for a Walk (-10)</button></li>
         <li><button id="btn-summon">Summon Bird (-5)</button></li>
         <li><button id="btn-watch">Visit Bird Nest (-15)</button></li>
       </ul>
-    </div> 
-  </div>
-  <div id="my-player">    
-  </div>
-    <span id="my-corn">Corn: 0</span> ||
-    <span id="my-feathers">Feathers: 0</span> ||
-    <span id="my-nests">Nest: 0</span> ||
-    <span id="my-birds">Birds: 0</span>
+    </div>
+    </div>
+    
+  
     
 
-   
-    
-    
     
     
     <script src="js/lib/jquery-3.2.1.min.js"></script>
     <script src="js/lib/jquery-ui.js"></script>
     <script src="js/lib/tether.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
   
