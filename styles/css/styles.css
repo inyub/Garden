@@ -1,18 +1,19 @@
-html body {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+html, body {
+height: 100%;
+    overflow: hidden;
 }
-.game {
-    
+
+.game { 
     width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: chartreuse;
 }
 .userstats {
-    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: cornflowerblue;
     color: white;
 }
@@ -20,8 +21,10 @@ html body {
 ul.my-actions {
     height: 50px;
     padding: 5px;
-    bottom: 0;
-    position: relative;
+    bottom: 200px;
+    position: absolute;
+    width: 100%;
+    margin: 0;
     background-color:darkslategrey;
     display: flex;
     align-items: center;
@@ -29,28 +32,47 @@ ul.my-actions {
 }
 
 .scene {
-    position: relative;
+    position: absolute;
+    margin: 0;
     padding-top: 20px;
     width: 100%;
-    height: 500px;
+    left: 0%;
+    min-height: 100%;
     text-align: center; 
-    vertical-align: center;
     background: rgb(214,249,255);
     background: -moz-linear-gradient(top, rgba(214,249,255,1) 0%, rgba(158,232,250,1) 100%);
     background: -webkit-linear-gradient(top, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%);
     background: linear-gradient(to bottom, rgba(214,249,255,1) 0%,rgba(158,232,250,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 );
 }
+.encounter-scene {
+    position: absolute;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    right: -100%;
+    min-height: 100%;
+    background-color: blueviolet;
+}
 .loggercontainer {
-    background-color: seagreen;
-    height: 150px;
-    padding: 20px;
+    background-color:rgb(50,50,100);
+    color: darkgray;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    bottom: 0;
+    position: absolute;
     overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
 }
 
-.logger {
-    height: 100px;
+.inventory, .logger {
+    height: 120px;
     width: 50%;
+    margin: 10px;
     position: relative;
     overflow:hidden;
 }
@@ -70,6 +92,7 @@ ul.my-actions {
 
   .my-actions li {
     display: inline;
+      margin: 0 5px 0 5px;
   }
 
 .btn-action {
