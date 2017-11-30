@@ -22,24 +22,24 @@ $(document).ready(function() {
         pnlLog.scrollTop = pnlLog.scrollHeight;
     }
 
-    function loadingDots(time) {
+    function loadingDots(time, str) {
         let count = 0;
-        $('<li id="loading">'+ "." +'</li>').appendTo('ul.log');
+        $('<li id="loading">'+ str +'</li>').appendTo('ul.log');
         pnlLog.scrollTop = pnlLog.scrollHeight;
-        let dots = ".";
+        let dots = str+ ".";
         let dotsAnim = setInterval(() => {
             if (count === time) {
                 $("#loading").remove();
                 clearInterval(dotsAnim);
-            } else if (dots === "...") {
-                dots = ".";
+            } else if (dots === str + "...") {
+                dots = str + "";
                 $("#loading").text(dots);
             } else {
                 dots += ".";
                 $("#loading").text(dots);
             }
             count++;
-        },1000);   
+        },500);   
     }
     
       
@@ -136,7 +136,7 @@ $(document).ready(function() {
                 this.loseEnergy(10);
                 
                 addToLog("You decide to take a walk, maybe you find something...");
-                loadingDots(walkLength); // log indicator that stuff is happening
+                loadingDots(walkLength, "walking"); // log indicator that stuff is happening
                 
                 let walking = setInterval(() => {
                     if (walkCounter === walkLength) {
