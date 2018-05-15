@@ -13,6 +13,10 @@ $(document).ready(function() {
     $("#btn-walk").click(function(){
         user.goForWalk();
     });
+    $("#btn-encounter").click(function(){
+        user.encounter(); 
+    })
+    
     
     //===// Log
     let pnlLog = document.getElementById("log-box");
@@ -165,6 +169,12 @@ $(document).ready(function() {
             collectedFeathers = collectedFeathers + newFeathers;
             addToLog("You found " + newFeathers + "x Feather");
             this.updateInvetory;
+        }
+        
+        encounter() {
+            addToLog("You encounter a Bird");
+            addToLog("It glances at you with curiousity. You...");
+            
         }
         
     } // USER CLASS END
